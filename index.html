@@ -3,12 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Picture Day Collective — The Preschool Photography Membership</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <meta name="description" content="A live, weekly membership for photographers who do preschool picture days. Built from 7 years of experience. Member-directed. Founding rate available for a limited time."/>
+  <title>Picture Day Collective — The Preschool Photography Community</title>
+  <meta name="description" content="A free community for photographers who do preschool picture days. Built from 7 years of experience. Member-directed. Join free — premium course access available."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet"/>
@@ -30,7 +26,6 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -42,7 +37,6 @@
       overflow-x: hidden;
     }
 
-    /* ── TEXTURE OVERLAY ── */
     body::before {
       content: '';
       position: fixed;
@@ -101,8 +95,6 @@
       text-align: center;
       overflow: hidden;
     }
-
-    /* diagonal gold bar behind hero */
     .hero::after {
       content: '';
       position: absolute;
@@ -115,9 +107,7 @@
       z-index: 0;
       pointer-events: none;
     }
-
     .hero > * { position: relative; z-index: 1; }
-
     .hero-eyebrow {
       font-family: var(--mono);
       font-size: .72rem;
@@ -137,7 +127,6 @@
       background: var(--gold);
       opacity: .5;
     }
-
     .hero h1 {
       font-family: var(--serif);
       font-size: clamp(2.8rem, 7vw, 5.5rem);
@@ -147,11 +136,7 @@
       max-width: 820px;
       margin-bottom: 32px;
     }
-    .hero h1 em {
-      font-style: italic;
-      color: var(--gold);
-    }
-
+    .hero h1 em { font-style: italic; color: var(--gold); }
     .hero-sub {
       font-size: 1.15rem;
       color: var(--ink-light);
@@ -159,7 +144,6 @@
       margin: 0 auto 52px;
       line-height: 1.75;
     }
-
     .hero-badges {
       display: flex;
       gap: 12px;
@@ -178,7 +162,6 @@
       border-radius: 2px;
       background: var(--gold-faint);
     }
-
     .hero-cta-group {
       display: flex;
       flex-direction: column;
@@ -206,11 +189,10 @@
       font-style: italic;
     }
 
-    /* ── SECTION WRAPPERS ── */
+    /* ── SECTIONS ── */
     section { position: relative; z-index: 1; }
     .container { max-width: 1080px; margin: 0 auto; padding: 0 32px; }
     .section-pad { padding: 100px 0; }
-
     .section-label {
       font-family: var(--mono);
       font-size: .68rem;
@@ -219,8 +201,6 @@
       color: var(--gold);
       margin-bottom: 20px;
     }
-
-    /* ── DIVIDER ── */
     .gold-rule {
       width: 60px;
       height: 2px;
@@ -246,7 +226,6 @@
     }
     .for-who h2 em { color: var(--gold); font-style: italic; }
     .for-who p { color: var(--ink-light); margin-bottom: 16px; font-size: .97rem; }
-
     .pain-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
     .pain-item {
       display: flex;
@@ -257,16 +236,11 @@
       border-left: 3px solid var(--gold);
       border-radius: 0 4px 4px 0;
     }
-    .pain-icon {
-      font-size: 1.2rem;
-      line-height: 1;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
+    .pain-icon { font-size: 1.2rem; line-height: 1; flex-shrink: 0; margin-top: 2px; }
     .pain-text { font-size: .9rem; color: var(--ink-mid); line-height: 1.55; }
     .pain-text strong { color: var(--ink); font-weight: 500; display: block; margin-bottom: 2px; }
 
-    /* ── WHY THIS ── */
+    /* ── FEATURES ── */
     .why-this { background: var(--cream); }
     .why-header { text-align: center; max-width: 640px; margin: 0 auto 72px; }
     .why-header h2 {
@@ -277,7 +251,6 @@
       margin-bottom: 20px;
     }
     .why-header p { color: var(--ink-light); font-size: .97rem; }
-
     .features-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -288,7 +261,6 @@
     .feature {
       background: var(--cream);
       padding: 36px 32px;
-      position: relative;
     }
     .feature-num {
       font-family: var(--mono);
@@ -307,21 +279,10 @@
     .feature p { font-size: .88rem; color: var(--ink-light); line-height: 1.65; }
 
     /* ── NOT A COURSE ── */
-    .not-course {
-      background: var(--ink);
-      color: var(--cream);
-    }
-    .not-course-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0;
-    }
-    .not-col {
-      padding: 80px 60px;
-    }
-    .not-col:first-child {
-      border-right: 1px solid rgba(200,146,26,0.2);
-    }
+    .not-course { background: var(--ink); color: var(--cream); }
+    .not-course-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+    .not-col { padding: 80px 60px; }
+    .not-col:first-child { border-right: 1px solid rgba(200,146,26,0.2); }
     .not-col .col-label {
       font-family: var(--mono);
       font-size: .65rem;
@@ -331,7 +292,6 @@
     }
     .not-col:first-child .col-label { color: rgba(250,247,240,0.4); }
     .not-col:last-child .col-label { color: var(--gold); }
-
     .compare-list { list-style: none; display: flex; flex-direction: column; gap: 20px; }
     .compare-item {
       display: flex;
@@ -344,9 +304,9 @@
     .not-col:first-child .compare-item { color: rgba(250,247,240,0.5); }
     .not-col:last-child .compare-item { color: rgba(250,247,240,0.9); }
 
-    /* ── FOUNDER OFFER ── */
-    .founder { background: var(--cream-dark); }
-    .founder-box {
+    /* ── JOIN ── */
+    .join-section { background: var(--cream-dark); }
+    .join-box {
       max-width: 760px;
       margin: 0 auto;
       background: var(--cream);
@@ -354,70 +314,23 @@
       border-top: 4px solid var(--gold);
       padding: 64px 72px;
       text-align: center;
-      position: relative;
       box-shadow: 0 20px 60px rgba(28,26,20,.06);
     }
-    .founder-stamp {
-      display: inline-block;
-      font-family: var(--mono);
-      font-size: .65rem;
-      letter-spacing: .2em;
-      text-transform: uppercase;
-      color: var(--white);
-      background: var(--gold);
-      padding: 6px 18px;
-      border-radius: 2px;
-      margin-bottom: 32px;
-    }
-    .founder-box h2 {
+    .join-box h2 {
       font-family: var(--serif);
       font-size: clamp(1.8rem, 4vw, 2.8rem);
       font-weight: 900;
       line-height: 1.15;
       margin-bottom: 24px;
     }
-    .founder-box h2 em { color: var(--gold); font-style: italic; }
-    .founder-box > p {
+    .join-box h2 em { color: var(--gold); font-style: italic; }
+    .join-box > p {
       color: var(--ink-light);
       font-size: .97rem;
       max-width: 520px;
       margin: 0 auto 44px;
       line-height: 1.75;
     }
-
-    .pricing-row {
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      gap: 40px;
-      margin-bottom: 48px;
-      flex-wrap: wrap;
-    }
-    .price-block { text-align: center; }
-    .price-label {
-      font-family: var(--mono);
-      font-size: .65rem;
-      letter-spacing: .15em;
-      text-transform: uppercase;
-      color: var(--ink-light);
-      margin-bottom: 8px;
-    }
-    .price-amount {
-      font-family: var(--serif);
-      font-size: 3.2rem;
-      font-weight: 900;
-      line-height: 1;
-      color: var(--ink);
-    }
-    .price-amount.founder-price { color: var(--gold); font-size: 4rem; }
-    .price-per { font-size: .78rem; color: var(--ink-light); margin-top: 4px; }
-    .price-divider {
-      font-family: var(--serif);
-      font-size: 1.5rem;
-      color: var(--gold-pale);
-      align-self: center;
-    }
-
     .perks-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -441,8 +354,19 @@
       flex-shrink: 0;
       margin-top: 7px;
     }
-
-    .urgency-box {
+    .free-badge {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: .65rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--gold);
+      padding: 6px 18px;
+      border-radius: 2px;
+      margin-bottom: 32px;
+    }
+    .premium-note {
       background: var(--gold-faint);
       border: 1px solid var(--gold-pale);
       border-radius: 3px;
@@ -452,9 +376,8 @@
       color: var(--ink-mid);
       line-height: 1.6;
     }
-    .urgency-box strong { color: var(--gold); }
-
-    .founder-cta {
+    .premium-note strong { color: var(--gold); }
+    .join-cta {
       display: inline-block;
       font-family: var(--sans);
       font-size: .9rem;
@@ -469,8 +392,8 @@
       transition: background .2s, transform .15s;
       margin-bottom: 16px;
     }
-    .founder-cta:hover { background: var(--gold); transform: translateY(-2px); }
-    .founder-note { font-size: .78rem; color: var(--ink-light); font-style: italic; }
+    .join-cta:hover { background: var(--gold); transform: translateY(-2px); }
+    .join-note { font-size: .78rem; color: var(--ink-light); font-style: italic; }
 
     /* ── ABOUT ── */
     .about { background: var(--cream); }
@@ -485,16 +408,9 @@
       background: var(--cream-dark);
       border: 1px solid var(--gold-pale);
       border-radius: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--ink-light);
-      font-size: .78rem;
-      font-style: italic;
-      text-align: center;
-      padding: 24px;
-      line-height: 1.5;
+      overflow: hidden;
     }
+    .about-photo img { width: 100%; height: 100%; object-fit: cover; }
     .about h2 {
       font-family: var(--serif);
       font-size: clamp(1.8rem, 3.5vw, 2.5rem);
@@ -530,12 +446,7 @@
       text-align: center;
       margin-bottom: 60px;
     }
-    .faq-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
-    }
-    .faq-item { padding: 0; }
+    .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
     .faq-q {
       font-family: var(--serif);
       font-size: 1rem;
@@ -563,7 +474,15 @@
       margin: 0 auto 28px;
     }
     .final-cta h2 em { color: var(--gold); font-style: italic; }
-    .final-cta p { color: rgba(250,247,240,.6); margin-bottom: 52px; font-size: .97rem; max-width: 440px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+    .final-cta p {
+      color: rgba(250,247,240,.6);
+      margin-bottom: 52px;
+      font-size: .97rem;
+      max-width: 440px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+    }
     .btn-gold {
       display: inline-block;
       font-family: var(--sans);
@@ -592,40 +511,6 @@
     }
     footer a { color: rgba(200,146,26,.6); text-decoration: none; }
 
-    /* ── COUNTDOWN ── */
-    .countdown {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      margin-bottom: 36px;
-      flex-wrap: wrap;
-    }
-    .count-block { text-align: center; min-width: 70px; }
-    .count-num {
-      font-family: var(--serif);
-      font-size: 2.4rem;
-      font-weight: 900;
-      color: var(--ink);
-      line-height: 1;
-      display: block;
-    }
-    .count-label {
-      font-family: var(--mono);
-      font-size: .6rem;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: var(--ink-light);
-      margin-top: 4px;
-      display: block;
-    }
-    .count-sep {
-      font-family: var(--serif);
-      font-size: 2rem;
-      color: var(--gold-pale);
-      align-self: flex-start;
-      padding-top: 4px;
-    }
-
     /* ── ANIMATIONS ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
@@ -636,7 +521,6 @@
     .delay-2 { animation-delay: .3s; }
     .delay-3 { animation-delay: .45s; }
     .delay-4 { animation-delay: .6s; }
-    .delay-5 { animation-delay: .75s; }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
@@ -649,7 +533,7 @@
       .perks-grid { grid-template-columns: 1fr; }
       .not-col { padding: 48px 32px; }
       .not-col:first-child { border-right: none; border-bottom: 1px solid rgba(200,146,26,0.2); }
-      .founder-box { padding: 44px 28px; }
+      .join-box { padding: 44px 28px; }
       .section-pad { padding: 72px 0; }
       .about-inner { gap: 40px; }
     }
@@ -660,27 +544,27 @@
   <!-- NAV -->
   <nav>
     <div class="nav-logo">Picture Day <span>Collective</span></div>
-    <a href="#join" class="nav-cta">Claim Founding Rate</a>
+    <a href="https://www.skool.com/picture-day-collective-2467/about" class="nav-cta">Join Free</a>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-eyebrow fade-up">Founding Member Enrollment — Now Open</div>
+    <div class="hero-eyebrow fade-up">The Preschool Photography Community</div>
     <h1 class="fade-up delay-1">
       Stop figuring out<br/>preschool picture day<br/><em>alone.</em>
     </h1>
     <p class="hero-sub fade-up delay-2">
-      A weekly live membership built exclusively for photographers who do preschool picture days — or want to. Real answers to real problems, every single week.
+      A free community for photographers who do preschool picture days — or want to. Real answers to real problems, from photographers doing exactly what you do.
     </p>
     <div class="hero-badges fade-up delay-3">
-      <span class="badge">Weekly Live Sessions</span>
+      <span class="badge">Free to Join</span>
       <span class="badge">Member-Directed</span>
-      <span class="badge">Founding Rate: $17/mo</span>
-      <span class="badge">Limited Time</span>
+      <span class="badge">Live Sessions</span>
+      <span class="badge">Premium Access Available</span>
     </div>
     <div class="hero-cta-group fade-up delay-4">
-      <a href="#join" class="btn-primary">Claim Your Founding Spot</a>
-      <span class="btn-note">Founding pricing closes July 2 at midnight — then it's $34/month.</span>
+      <a href="https://www.skool.com/picture-day-collective-2467/about" class="btn-primary">Join the Community — Free</a>
+      
     </div>
   </section>
 
@@ -690,16 +574,16 @@
       <div class="for-who-inner">
         <div>
           <div class="section-label">Who This Is For</div>
-          <h2>Built for the photographer<br/>who knows <em>what they're capable of</em> and wants to walk in<br/>prepared.</h2>
-          <p>If you're photographing preschool picture days — or trying to break into them — you already know the problems aren't about talent. They're about logistics, systems, and spaces nobody prepares you for.</p>
-          <p>This membership was built for you. Not for big studios with crews. For the independent photographer who is serious about doing this right.</p>
+          <h2>Built for the photographer<br/>who wants in — and doesn't<br/>want to figure it out <em>the hard way.</em></h2>
+          <p>If you're a portrait, headshot, or family photographer looking to add preschool picture days to your business — or if you're already doing them and want to do them better — this community was built for you.</p>
+          <p>Not for big studios. Not for general photographers who dabble. For the independent photographer who is serious about doing this right.</p>
         </div>
         <ul class="pain-list">
           <li class="pain-item">
             <div class="pain-icon">📐</div>
             <div class="pain-text">
-              <strong>Inconsistent lighting school to school</strong>
-              Every space is different. You're improvising every time. There should be a system for this.
+              <strong>Inconsistent results room to room</strong>
+              Every classroom is different. You're improvising every time. There should be a system for this — and there is.
             </div>
           </li>
           <li class="pain-item">
@@ -712,8 +596,8 @@
           <li class="pain-item">
             <div class="pain-icon">📋</div>
             <div class="pain-text">
-              <strong>The logistics are chaos</strong>
-              Makeups, editing, order fulfillment, parent communication, school director relationships — nobody gave you the playbook.
+              <strong>The logistics feel overwhelming</strong>
+              Re-takes, order fulfillment, parent communication, school director relationships — nobody gave you the playbook.
             </div>
           </li>
           <li class="pain-item">
@@ -727,7 +611,7 @@
             <div class="pain-icon">🔄</div>
             <div class="pain-text">
               <strong>No one to ask who actually gets it</strong>
-              You feel like you're solving problems that have already been solved — by someone else.
+              General photography groups don't understand this work. Picture Day Collective is built entirely around it.
             </div>
           </li>
         </ul>
@@ -735,54 +619,59 @@
     </div>
   </section>
 
-  <!-- WHY THIS -->
+  <!-- FEATURES -->
   <section class="why-this section-pad">
     <div class="container">
       <div class="why-header">
         <div class="section-label">What You Get</div>
         <h2>Everything you need to run preschool picture days with confidence.</h2>
-        <p>Not a course you'll watch once. A living, growing community that evolves with you — and with the industry.</p>
+        <p>Not a course sitting on a shelf. A living community that evolves with you — and with the industry.</p>
       </div>
       <div class="features-grid">
         <div class="feature">
           <div class="feature-num">01 —</div>
-          <h3>Weekly Live Sessions</h3>
-          <p>We meet every week. Bring your actual problems — consistent editing so you're not spending hours on that, the room with impossible lighting, the re-take situation — and we work through it together. Hands-on demos when needed.</p>
+          <h3>Live Sessions</h3>
+          <p>We meet regularly. Bring your actual problems — the classroom with difficult lighting, the re-take situation you're not sure how to handle — and we work through it together.</p>
         </div>
         <div class="feature">
           <div class="feature-num">02 —</div>
           <h3>You Control the Curriculum</h3>
-          <p>Members can vote on topics that matter most right now. No fixed syllabus. No irrelevant modules. The community decides what we tackle next — and that's what we teach.</p>
+          <p>Members vote on topics that matter most right now. No fixed syllabus. No irrelevant modules. The community decides what we tackle next.</p>
         </div>
         <div class="feature">
           <div class="feature-num">03 —</div>
           <h3>Full Searchable Archive</h3>
-          <p>Every session recorded and stored. Search by topic and find exactly what you need in seconds — whether it's a lighting setup from three months ago or a school pitching script or the text for every email you'll send.</p>
+          <p>Every session recorded and stored. Search by topic and find exactly what you need in seconds — lighting setups, school pitching scripts, order workflow, and more.</p>
         </div>
         <div class="feature">
           <div class="feature-num">04 —</div>
           <h3>7 Years of SOPs & Systems</h3>
-          <p>The exact templates, checklists, and workflows built over 7 years of preschool picture days — including the systems created to train another photographer from scratch.</p>
+          <p>The exact templates, checklists, and workflows built from 7 years of preschool picture days — including the systems developed to train an assistant from scratch.</p>
         </div>
         <div class="feature">
           <div class="feature-num">05 —</div>
           <h3>Easy All-in-One Platform</h3>
-          <p>Search content, post in the forum, add live sessions to your calendar with one tap, DM members directly. Member map shows who else is in the community and where. No app-switching.</p>
+          <p>Search content, post in the forum, add sessions to your calendar with one tap, DM members directly. Member map shows who's in the community and where.</p>
         </div>
         <div class="feature">
           <div class="feature-num">06 —</div>
-          <h3>A Team Who Shows Up</h3>
-          <p>Not a creator who checks in once in a while. Photographers and the critical team members who are active in the forum and DMs — not just at live sessions. This community gets real attention because it matters.</p>
+          <h3>An Owner Who Shows Up</h3>
+          <p>Not a creator who checks in once a month. Active in the forum and DMs regularly — not just at live sessions. This community gets real attention because it matters.</p>
         </div>
         <div class="feature">
           <div class="feature-num">07 —</div>
-          <h3> Prizes, Leaderboards & Community Energy</h3>
-          <p>Real prizes and recognition — and a reason to share what you're doing and compete in the best way possible. We reward the members who contribute and help others and seek out deals for members. That's the kind of community energy we curate. </p>
+          <h3>Contests</h3>
+          <p>Best picture day setup? Most creative solution to a tough space? Recognition for those who share and show up.</p>
         </div>
         <div class="feature">
           <div class="feature-num">08 —</div>
-          <h3>Portfolio Reviews</h3>
-          <p>Great photographers seek honest, helpful critiques. We'll set aside regular time to help critique your images and give you actionable advice to improve.</p>
+          <h3>Community of Peers</h3>
+          <p>Connect with photographers doing exactly what you do. Direct messaging, member map, and leaderboards keep the community active and engaged.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-num">09 —</div>
+          <h3>Premium Course Access</h3>
+          <p>Free members access the community, standard live sessions, and base material. Premium members unlock in-depth course content — detailed modules covering lighting, workflow, pricing, portfolio reviews, and more.</p>
         </div>
       </div>
     </div>
@@ -793,94 +682,37 @@
     <div class="container" style="padding:0 32px">
       <div class="not-course-inner">
         <div class="not-col">
-          <div class="col-label">Recorded Courses</div>
+          <div class="col-label">Generic Photography Groups</div>
           <ul class="compare-list">
-            <li class="compare-item"><span class="icon">✕</span><span>Fixed content made for someone else's problems</span></li>
-            <li class="compare-item"><span class="icon">✕</span><span>Outdated by the time you watch it</span></li>
-            <li class="compare-item"><span class="icon">✕</span><span>No one to ask when you get stuck</span></li>
-            <li class="compare-item"><span class="icon">✕</span><span>Ignores today's tools, pricing, and industry shifts</span></li>
-            <li class="compare-item"><span class="icon">✕</span><span>You get what someone else decided mattered</span></li>
-            <li class="compare-item"><span class="icon">✕</span><span>Generic or high volume machines — not built for preschool photographers</span></li>
+            <li class="compare-item"><span class="icon">✕</span><span>No one understands the specific challenges of preschool picture days</span></li>
+            <li class="compare-item"><span class="icon">✕</span><span>Generic advice that doesn't apply to your work</span></li>
+            <li class="compare-item"><span class="icon">✕</span><span>No dedicated resources, no archived answers</span></li>
+            <li class="compare-item"><span class="icon">✕</span><span>You're figuring it out alone, every time</span></li>
+            <li class="compare-item"><span class="icon">✕</span><span>Fixed content that goes out of date</span></li>
           </ul>
         </div>
         <div class="not-col">
           <div class="col-label">Picture Day Collective</div>
           <ul class="compare-list">
-            <li class="compare-item"><span class="icon" style="color:var(--gold)">✓</span><span>Live weekly sessions — always current, always relevant</span></li>
-            <li class="compare-item"><span class="icon" style="color:var(--gold)">✓</span><span>Built exclusively for artisan, private preschool picture day photographers</span></li>
+            <li class="compare-item"><span class="icon" style="color:var(--gold)">✓</span><span>Built exclusively for preschool picture day photographers</span></li>
+            <li class="compare-item"><span class="icon" style="color:var(--gold)">✓</span><span>Live sessions — current and relevant to your work</span></li>
             <li class="compare-item"><span class="icon" style="color:var(--gold)">✓</span><span>Your exact questions answered — not a script</span></li>
-            <li class="compare-item"><span class="icon" style="color:var(--gold)">✓</span><span>Addresses today's conditions, tools, and challenges</span></li>
-            <li class="compare-item"><span class="icon" style="color:var(--gold)">✓</span><span>Members vote on topics they want — you shape what's next</span></li>
-            <li class="compare-item"><span class="icon" style="color:var(--gold)">✓</span><span>A community that solves problems together</span></li>
+            <li class="compare-item"><span class="icon" style="color:var(--gold)">✓</span><span>Addresses today's tools, pricing, and challenges</span></li>
+            <li class="compare-item"><span class="icon" style="color:var(--gold)">✓</span><span>Members vote on topics — you shape what's next</span></li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOUNDER OFFER -->
-  <section class="founder section-pad" id="join">
+  <!-- JOIN -->
+  <section class="join-section section-pad" id="join">
     <div class="container">
-      <div class="founder-box">
-        <div class="founder-stamp">⏳ Limited Time — Founding Member Offer</div>
-        <h2>Join now at <em>$17/month.</em><br/>Stay at that rate forever.</h2>
-        <p>Founding members lock in their rate permanently. When the founding window closes on July 2 at midnight, the price moves to $34/month — and founding pricing is gone for good.</p>
-
-        <div class="countdown" id="countdown">
-          <div class="count-block">
-            <span class="count-num" id="cd-days">--</span>
-            <span class="count-label">Days</span>
-          </div>
-          <span class="count-sep">:</span>
-          <div class="count-block">
-            <span class="count-num" id="cd-hours">--</span>
-            <span class="count-label">Hours</span>
-          </div>
-          <span class="count-sep">:</span>
-          <div class="count-block">
-            <span class="count-num" id="cd-mins">--</span>
-            <span class="count-label">Minutes</span>
-          </div>
-          <span class="count-sep">:</span>
-          <div class="count-block">
-            <span class="count-num" id="cd-secs">--</span>
-            <span class="count-label">Seconds</span>
-          </div>
-        </div>
-
-        <div class="pricing-row">
-          <div class="price-block">
-            <div class="price-label">Founding Rate</div>
-            <div class="price-amount founder-price">$17</div>
-            <div class="price-per">per month — locked forever</div>
-          </div>
-          <div class="price-divider">vs</div>
-          <div class="price-block">
-            <div class="price-label">After July 2</div>
-            <div class="price-amount" style="opacity:.4;text-decoration:line-through">$34</div>
-            <div class="price-per">per month — regular rate</div>
-          </div>
-        </div>
-
-        <div class="perks-grid">
-          <div class="perk"><div class="perk-dot"></div><span>Weekly live sessions from day one</span></div>
-          <div class="perk"><div class="perk-dot"></div><span>Vote on the session topics you need</span></div>
-          <div class="perk"><div class="perk-dot"></div><span>Foundation video library — 6 videos ready immediately</span></div>
-          <div class="perk"><div class="perk-dot"></div><span>Full archive — every session searchable</span></div>
-          <div class="perk"><div class="perk-dot"></div><span>7 years of SOPs, templates & checklists</span></div>
-          <div class="perk"><div class="perk-dot"></div><span>All-in-one platform — search, forum, calendar, DMs</span></div>
-          <div class="perk"><div class="perk-dot"></div><span>Member map & direct messaging</span></div>
-          <div class="perk"><div class="perk-dot"></div><span>Contests with real prizes</span></div>
-          <div class="perk"><div class="perk-dot"></div><span>Leaderboards & community recognition</span></div>
-          <div class="perk"><div class="perk-dot"></div><span>Daily access — forum, DMs, live sessions</span></div>
-        </div>
-
-        <div class="urgency-box">
-          <strong>The founding window closes July 2, 2026 at midnight.</strong> After that, the rate moves to $34/month. Founding members keep their $17 rate for as long as they're continuous members — it never changes.
-        </div>
-
-        <a href="https://www.skool.com/picture-day-collective-2467/about" class="founder-cta">Claim Your Founding Spot — $17/mo</a>
-        <div class="founder-note">Cancel any time. No contracts. Your rate is locked the moment you join.</div>
+      <div class="join-box">
+        <div class="free-badge">Free to Join</div>
+        <h2>Join Picture Day Collective.<br/><em>Free.</em></h2>
+        <p>Access the community, standard live sessions, and intro materials. No risk - jump in and see what it's like.</p>
+        <a href="https://www.skool.com/picture-day-collective-2467/about" class="join-cta">Join Free — Get Started Now</a>
       </div>
     </div>
   </section>
@@ -889,25 +721,23 @@
   <section class="about section-pad">
     <div class="container">
       <div class="about-inner">
-        <img src="Robin_Sgambati_PDC.webp" alt="Robin Sgambati" style="width:100%;border-radius:4px;"/>
+        <div class="about-photo">
+          <img src="Robin_Sgambati_PDC.webp" alt="Robin Sgambati"/>
+        </div>
         <div>
           <div class="section-label">About Your Host</div>
-          <h2>Built from <em>7 years</em> of picture days — not theory.</h2>
-          <p>Everything in Picture Day Collective comes from real preschool picture day experience. The lighting systems were developed school by school until we came up with a sure-fire, super easy, and replicable setup. The SOPs were refined until they were clear enough to train another from scratch. The workflows were built to handle real order fulfillment without manual data entry.</p>
-          <p>This isn't a course created from the outside looking in. It's a community built by a photographer who is still in the field — still booking schools, still running picture days, still refining the systems every season.</p>
-          <p>The membership exists because these problems don't need to be solved alone. They've already been solved. Come get the answers.</p>
+          <h2>Built from <em>7 years</em> of doing the work.</h2>
+          <p>Robin Sgambati is a professional photographer with experience across corporate headshots, events, family portraits, and preschool photography. Her clients have included the USPS, Fortune 500 companies, small businesses, and startups.</p>
+          <p>Over the past 7 years she has also built a complete preschool picture day operation — refined until it was clear enough to train an assistant from scratch.</p>
+          <p>Picture Day Collective is where she shares everything she's built.</p>
           <div class="about-stats">
             <div>
               <div class="stat-num">7</div>
               <div class="stat-label">Years of picture days</div>
             </div>
             <div>
-              <div class="stat-num">52+</div>
-              <div class="stat-label">Live sessions per year</div>
-            </div>
-            <div>
-              <div class="stat-num">6</div>
-              <div class="stat-label">Foundation videos ready day one</div>
+              <div class="stat-num">∞</div>
+              <div class="stat-label">Problems solved together</div>
             </div>
           </div>
         </div>
@@ -926,23 +756,15 @@
         </div>
         <div class="faq-item">
           <div class="faq-q">I'm just starting out — is this for me?</div>
-          <div class="faq-a">Yes. The foundation video library covers everything from how to pitch your first school to the basic lighting setup and order workflow. You don't need existing experience — you just need to be serious about building this part of your business.</div>
+          <div class="faq-a">Yes. You can get started with the foundation video library and then ask away. You don't need existing experience — you just need to be serious about building this part of your business.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q">Is this only for preschool, or does it cover other school photography?</div>
-          <div class="faq-a">The focus is preschool (including daycare) picture days specifically — the spaces, the logistics, the school relationships, the parent communication, the pricing. Much of it applies to other school photography, and many of our schools go through teens, but preschool is the core niche, for very specific reasons we'll detail in the community.</div>
+          <div class="faq-a">The focus is preschool picture days specifically — the spaces, the logistics, the school relationships, the parent communication, the pricing. Much of it applies to other volume school photography, but preschool is the core niche.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q">What does "member-directed curriculum" actually mean?</div>
-          <div class="faq-a">We'll have ongoing polls to request topic options. The topics with the most votes are what we cover. You are literally choosing what gets taught. No pre-set curriculum, no outdated module list.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">Can I cancel?</div>
-          <div class="faq-a">Yes, any time. No contracts, no cancellation fees. If you're a founding member and you cancel, you'll rejoin at a new rate — so stay as long as it's valuable, which we expect to be a long time.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">Why is the founding rate so much lower?</div>
-          <div class="faq-a">Founding members get rewarded for their commitment to jump starting the community. That deserves recognition. The $17 rate is locked permanently as a thank-you for being one of the first. It actually doesn't reflect the full value of the community, but future rates will.</div>
+          <div class="faq-a">We have polls with topic options or you can add your own. You are literally choosing what gets taught. No pre-set curriculum, no outdated module list.</div>
         </div>
       </div>
     </div>
@@ -950,46 +772,16 @@
 
   <!-- FINAL CTA -->
   <section class="final-cta">
-    <div class="section-label">Last Chance</div>
-    <h2>Founding pricing closes<br/><em>July 2 at midnight.</em></h2>
-    <p>After that, it's $34/month. The community is the same — the rate is not. Join now and lock in $17/month for as long as you're a member.</p>
-    <a href="https://www.skool.com/picture-day-collective-2467/about" class="btn-gold">Claim Your Founding Rate — $17/mo</a>
+    <div class="section-label">Get Started</div>
+    <h2>Stop figuring it out<br/><em>alone.</em></h2>
+    <p>Join Picture Day Collective free. The community, the sessions, the archive, and the people who understand exactly what you're dealing with — all in one place.</p>
+    <a href="https://www.skool.com/picture-day-collective-2467/about" class="btn-gold">Join Free — Get Started Now</a>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 Picture Day Collective · <a href="mailto:info@picturedaycollective.com">info@picturedaycollective.com</a> · <a href="#">picturedaycollective.com</a></p>
+    <p>© 2026 Picture Day Collective · <a href="mailto:info@picturedaycollective.com">info@picturedaycollective.com</a> · <a href="https://picturedaycollective.com">picturedaycollective.com</a></p>
   </footer>
-
-  <!-- COUNTDOWN SCRIPT -->
-  <script>
-    // Set deadline: July 2, 2026 at midnight Eastern (UTC-4 in summer)
-    const deadline = new Date('2026-07-03T04:00:00Z'); // midnight ET = 4am UTC
-
-    function updateCountdown() {
-      const now = new Date();
-      const diff = deadline - now;
-
-      if (diff <= 0) {
-        document.getElementById('countdown').innerHTML =
-          '<p style="font-family:var(--serif);font-size:1.2rem;color:var(--ink-light);font-style:italic;">The founding window has closed.</p>';
-        return;
-      }
-
-      const days  = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const mins  = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const secs  = Math.floor((diff % (1000 * 60)) / 1000);
-
-      document.getElementById('cd-days').textContent  = String(days).padStart(2,'0');
-      document.getElementById('cd-hours').textContent = String(hours).padStart(2,'0');
-      document.getElementById('cd-mins').textContent  = String(mins).padStart(2,'0');
-      document.getElementById('cd-secs').textContent  = String(secs).padStart(2,'0');
-    }
-
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-  </script>
 
 </body>
 </html>
